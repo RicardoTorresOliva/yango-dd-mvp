@@ -1,10 +1,7 @@
 "use client"
 
 import * as React from "react"
-import * as TabsPrimitive from "@radix-ui/react-tabs" // Need to install @radix-ui/react-tabs
-// I'll implement custom Tabs to avoid installing more deps if possible, or just install them.
-// "Wow" factor needs quality. Radix is good.
-// But I can build a simple Tab component without Radix for speed.
+import { cn } from "@/lib/utils"
 
 // Simple Tabs implementation
 const TabsContext = React.createContext<{ activeTab: string; setActiveTab: (v: string) => void } | null>(null);

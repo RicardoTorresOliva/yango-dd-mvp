@@ -1,6 +1,4 @@
 import * as React from "react"
-import { Slot } from "@radix-ui/react-slot" // Need to install @radix-ui/react-slot or just implement simple button
-import { cva, type VariantProps } from "class-variance-authority" // Need class-variance-authority
 import { cn } from "@/lib/utils"
 
 // I'll implement a simpler button without CVA for now to speed up, or install CVA.
