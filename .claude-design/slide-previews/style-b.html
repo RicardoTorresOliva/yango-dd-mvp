@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style B: Dark Executive</title>
+    <link rel="stylesheet"
+        href="https://api.fontshare.com/v2/css?f[]=clash-display@700,600&f[]=satoshi@400,700&display=swap">
+    <style>
+        :root {
+            --bg: #020617;
+            --text: #f8fafc;
+            --accent: #ef4444;
+            --font-display: 'Clash Display', sans-serif;
+            --font-body: 'Satoshi', sans-serif;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-body);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bg-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.05) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            transform: scale(0.95);
+            animation: reveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        h1 {
+            font-family: var(--font-display);
+            font-size: 6rem;
+            margin: 0;
+            background: linear-gradient(to bottom, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            color: var(--accent);
+            border-radius: 99px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-top: 2rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        @keyframes reveal {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-glow"></div>
+    <div class="container">
+        <div class="tag">Regional Security Engine</div>
+        <h1>STITCH DD</h1>
+        <p>V2.0 Automation MVP</p>
+    </div>
+</body>
+
+</html>
